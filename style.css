@@ -13,11 +13,11 @@
     --card: #ffffff;
 
     --text: #111827;
-    --text-secondary: #6b7280;
+    --text-secondary: #4b5563;
 
-    --border: #dfe3e8;
+    --border: #d9e0e8;
 
-    --nav-bg: rgba(255, 255, 255, 0.92);
+    --nav-bg: rgba(255, 255, 255, 0.94);
 
     --shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
 
@@ -33,18 +33,21 @@
 
 body.dark-mode {
     --bg: #080d18;
-    --bg-alt: #0d1424;
+    --bg-alt: #0d1628;
 
-    --card: #111a2c;
+    --card: #101c30;
 
-    --text: #f8fafc;
-    --text-secondary: #aab4c5;
+    /* MAIN TEXT = WHITE */
+    --text: #ffffff;
 
-    --border: #26344c;
+    /* SECONDARY TEXT = LIGHT GRAY */
+    --text-secondary: #cbd5e1;
 
-    --nav-bg: rgba(8, 13, 24, 0.94);
+    --border: #243653;
 
-    --shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    --nav-bg: rgba(8, 13, 24, 0.96);
+
+    --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -67,7 +70,9 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    transition: background var(--transition), color var(--transition);
+    transition:
+        background var(--transition),
+        color var(--transition);
 }
 
 a {
@@ -107,6 +112,7 @@ img {
 
     background: var(--nav-bg);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 
     border-bottom: 1px solid var(--border);
 }
@@ -124,6 +130,7 @@ img {
 .logo {
     font-size: 25px;
     font-weight: 800;
+    color: var(--text);
 }
 
 .logo span {
@@ -186,10 +193,13 @@ img {
 
 .hero {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
 
     padding: 130px 0 80px;
+
+    background: var(--bg);
 }
 
 .hero-container {
@@ -198,17 +208,22 @@ img {
 
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
+
     align-items: center;
+
     gap: 70px;
 }
 
 .hero-label {
     color: var(--primary);
+
     font-weight: 700;
+
     margin-bottom: 18px;
 
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
 
@@ -217,15 +232,21 @@ img {
     height: 9px;
 
     background: #22c55e;
+
     border-radius: 50%;
 
-    box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.12);
+    box-shadow:
+        0 0 0 6px rgba(34, 197, 94, 0.12);
 }
 
 .hero h1 {
     font-size: clamp(45px, 6vw, 72px);
+
     line-height: 1.05;
+
     margin-bottom: 18px;
+
+    color: var(--text);
 }
 
 .hero h1 span {
@@ -234,8 +255,12 @@ img {
 
 .hero h2 {
     font-size: clamp(22px, 3vw, 34px);
+
     line-height: 1.35;
+
     margin-bottom: 22px;
+
+    color: var(--text);
 }
 
 .hero h2 span {
@@ -244,8 +269,11 @@ img {
 
 .hero-description {
     max-width: 650px;
+
     color: var(--text-secondary);
+
     font-size: 17px;
+
     margin-bottom: 30px;
 }
 
@@ -257,7 +285,9 @@ img {
 .hero-buttons,
 .contact-buttons {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 14px;
 }
 
@@ -267,10 +297,13 @@ img {
     border-radius: 10px;
 
     display: inline-flex;
+
     align-items: center;
+
     gap: 9px;
 
     font-weight: 700;
+
     font-size: 14px;
 
     transition: var(--transition);
@@ -278,22 +311,29 @@ img {
 
 .btn-primary {
     background: var(--primary);
-    color: white;
+
+    color: #ffffff;
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
+
     transform: translateY(-2px);
 }
 
 .btn-outline {
     border: 1px solid var(--border);
+
     color: var(--text);
+
+    background: transparent;
 }
 
 .btn-outline:hover {
     border-color: var(--primary);
+
     color: var(--primary);
+
     transform: translateY(-2px);
 }
 
@@ -304,7 +344,9 @@ img {
 
 .social-links {
     display: flex;
+
     gap: 12px;
+
     margin-top: 25px;
 }
 
@@ -314,10 +356,13 @@ img {
     height: 42px;
 
     border: 1px solid var(--border);
+
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     color: var(--text-secondary);
@@ -327,9 +372,12 @@ img {
 
 .social-links a:hover,
 .footer-socials a:hover {
-    color: white;
+    color: #ffffff;
+
     background: var(--primary);
+
     border-color: var(--primary);
+
     transform: translateY(-3px);
 }
 
@@ -342,7 +390,9 @@ img {
     position: relative;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     min-height: 480px;
@@ -383,6 +433,7 @@ img {
 .image-circle img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 }
 
@@ -405,24 +456,33 @@ img {
     border-radius: 14px;
 
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 
     z-index: 3;
+
+    color: var(--text);
 }
 
 .floating-card i {
     color: var(--primary);
+
     font-size: 20px;
 }
 
 .floating-card strong {
     display: block;
+
     font-size: 13px;
+
+    color: var(--text);
 }
 
 .floating-card small {
     color: var(--text-secondary);
+
     font-size: 11px;
 }
 
@@ -443,6 +503,8 @@ img {
 
 .section {
     padding: 100px 0;
+
+    background: var(--bg);
 }
 
 .section-alt {
@@ -455,14 +517,20 @@ img {
 
 .section-heading > span {
     color: var(--primary);
+
     font-size: 13px;
+
     font-weight: 800;
+
     letter-spacing: 2px;
 }
 
 .section-heading h2 {
     margin-top: 8px;
+
     font-size: clamp(30px, 4vw, 44px);
+
+    color: var(--text);
 }
 
 .section-heading strong {
@@ -512,6 +580,14 @@ img {
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--primary);
 }
 
 .stat-number {
@@ -593,6 +669,8 @@ img {
     padding: 32px;
 
     box-shadow: var(--shadow);
+
+    color: var(--text);
 }
 
 .experience-top {
@@ -644,6 +722,8 @@ img {
     line-height: 1.2;
 
     margin: 0;
+
+    color: var(--text);
 }
 
 .company-details .role {
@@ -712,7 +792,7 @@ img {
 
 
 /* =========================================================
-   NLC SCREENSHOT BUTTON
+   GALLERY BUTTON
 ========================================================= */
 
 .nlc-gallery-btn {
@@ -750,7 +830,8 @@ img {
 
     transform: translateY(-3px);
 
-    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.25);
 }
 
 .nlc-gallery-btn i {
@@ -759,7 +840,7 @@ img {
 
 
 /* =========================================================
-   NLC SCREENSHOT POPUP
+   GALLERY POPUP
 ========================================================= */
 
 .nlc-gallery-overlay {
@@ -809,11 +890,14 @@ img {
 
     padding: 25px;
 
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35);
 
     transform: translateY(20px) scale(0.97);
 
     transition: transform 0.3s ease;
+
+    color: var(--text);
 }
 
 .nlc-gallery-overlay.active .nlc-gallery-modal {
@@ -841,6 +925,8 @@ img {
     font-size: 25px;
 
     margin: 0;
+
+    color: var(--text);
 }
 
 .nlc-gallery-header p {
@@ -882,7 +968,7 @@ img {
 .nlc-gallery-close:hover {
     background: var(--primary);
 
-    color: white;
+    color: #ffffff;
 
     border-color: var(--primary);
 
@@ -961,6 +1047,8 @@ img {
     transition: var(--transition);
 
     overflow: hidden;
+
+    color: var(--text);
 }
 
 .project-card:hover {
@@ -1009,6 +1097,8 @@ img {
     font-size: 19px;
 
     margin-bottom: 12px;
+
+    color: var(--text);
 }
 
 .project-card p {
@@ -1037,7 +1127,7 @@ img {
 
     border-radius: 7px;
 
-    color: var(--text-secondary);
+    color: var(--text);
 
     font-size: 11px;
 
@@ -1047,6 +1137,7 @@ img {
 
 /* =========================================================
    SKILLS
+   Matches your screenshot style
 ========================================================= */
 
 .skills-grid {
@@ -1067,6 +1158,16 @@ img {
     padding: 25px;
 
     box-shadow: var(--shadow);
+
+    transition: all 0.3s ease;
+
+    color: var(--text);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--primary);
 }
 
 .skill-heading {
@@ -1081,10 +1182,14 @@ img {
 
 .skill-heading i {
     color: var(--primary);
+
+    font-size: 20px;
 }
 
 .skill-heading h3 {
     font-size: 16px;
+
+    color: var(--text);
 }
 
 .skill-list {
@@ -1093,6 +1198,40 @@ img {
     flex-wrap: wrap;
 
     gap: 7px;
+}
+
+.skill-list span {
+    color: var(--text);
+
+    background: var(--bg-alt);
+
+    border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   DARK MODE SKILL CARDS
+   ========================================================= */
+
+body.dark-mode .skill-category {
+    background: #101c30;
+
+    border-color: #243653;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .skill-heading h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .skill-list span {
+    background: #17243a;
+
+    border-color: #29405f;
+
+    color: #ffffff;
 }
 
 
@@ -1126,6 +1265,8 @@ img {
     box-shadow: var(--shadow);
 
     transition: var(--transition);
+
+    color: var(--text);
 }
 
 .certificate-card:hover {
@@ -1156,6 +1297,8 @@ img {
 
 .certificate-card h3 {
     font-size: 15px;
+
+    color: var(--text);
 }
 
 .certificate-card p {
@@ -1191,6 +1334,8 @@ img {
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
+
+    color: var(--text);
 }
 
 .education-icon {
@@ -1229,6 +1374,8 @@ img {
     font-size: 20px;
 
     margin: 4px 0;
+
+    color: var(--text);
 }
 
 .education-content p {
@@ -1284,6 +1431,8 @@ img {
     font-size: clamp(30px, 4vw, 45px);
 
     margin: 10px 0 18px;
+
+    color: var(--text);
 }
 
 .contact-content h2 strong {
@@ -1308,7 +1457,7 @@ img {
 footer {
     background: #080d18;
 
-    color: white;
+    color: #ffffff;
 
     padding: 35px 0 20px;
 }
@@ -1329,6 +1478,8 @@ footer {
 
 .footer-container strong {
     font-size: 18px;
+
+    color: #ffffff;
 }
 
 .footer-container p {
@@ -1438,7 +1589,6 @@ footer {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
@@ -1458,13 +1608,11 @@ footer {
 
     .image-circle {
         width: 270px;
-
         height: 270px;
     }
 
     .image-glow {
         width: 270px;
-
         height: 270px;
     }
 
@@ -1478,13 +1626,11 @@ footer {
 
     .card-one {
         left: 0;
-
         top: 50px;
     }
 
     .card-two {
         right: 0;
-
         bottom: 50px;
     }
 
@@ -1504,18 +1650,12 @@ footer {
         flex-direction: column;
     }
 
-
-    /* =====================================================
-       MOBILE COMPANY LOGOS
-    ===================================================== */
-
     .company-name {
         gap: 15px;
     }
 
     .company-logo {
         width: 70px;
-
         height: 55px;
     }
 
@@ -1526,7 +1666,6 @@ footer {
     .company-details .role {
         font-size: 14px;
     }
-
 
     .education-card {
         flex-direction: column;
@@ -1565,5 +1704,4 @@ footer {
 
         justify-content: center;
     }
-
 }
